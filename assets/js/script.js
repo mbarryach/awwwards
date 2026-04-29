@@ -1,4 +1,4 @@
-// --- SMOOTH SCROLL ---
+// --- SMOOTH SCROLL LENIS---
 const lenis = new Lenis();
 
 function raf(time) {
@@ -7,6 +7,20 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+// --- GSAP ---
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".gallery-item", {
+  scrollTrigger: {
+    trigger: ".gallery-section",
+    start: "top 80%",
+  },
+  y: 100,
+  opacity: 0,
+  stagger: 0.1,
+  duration: 1
+});
 
 // --- CUSTOM CURSOR ---
 const cursor = document.querySelector('.cursor');
