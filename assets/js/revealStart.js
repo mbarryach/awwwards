@@ -1,6 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// HERO INTRO
 let tlHero = gsap.timeline();
 
 tlHero
@@ -19,7 +18,7 @@ tlHero
         ease: "power3.out",
         filter: "blur(0px)"
     }, 
-    "-=0.5" // empieza antes de que acabe la anterior
+    "-=0.5"
 )
 
 .fromTo(".my-name", 
