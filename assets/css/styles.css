@@ -53,6 +53,34 @@ body:has(.gallery-item:hover) .cursor {
 }
 
 /* =====================
+   START INTRO
+===================== */
+.intro-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: var(--color-principal);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999;
+
+    overflow: hidden;
+}
+
+.intro-title {
+    font-size: clamp(13rem, 18vw, 15rem);
+    color: var(--color-secundario);
+
+    line-height: 0.8;
+    letter-spacing: -0.08em;
+
+    white-space: nowrap;
+}
+
+/* =====================
    HERO
 ===================== */
 .hero {
@@ -96,15 +124,19 @@ body:has(.gallery-item:hover) .cursor {
     padding: 60px 0px;
 }
 
-.content {
-    z-index: 1;
-    padding: 2rem;
+.content{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .content h1,
-.my-name {
+.my-name,
+.about p {
     opacity: 0;
-    transform: translateY(40px);
 }
 
 .about p {
@@ -114,10 +146,16 @@ body:has(.gallery-item:hover) .cursor {
 }
 
 .content h1 {
-    font-size: 15rem;
+    font-size: clamp(13rem, 18vw, 15rem);
+    line-height: 0.8;
+
     color: var(--color-principal);
-    font-weight: 600;
+    font-weight: 700;
+
     letter-spacing: -0.12em;
+
+    position: relative;
+    z-index: 5;
 }
 
 .my-name h1 {
