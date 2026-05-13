@@ -2,7 +2,7 @@
    RESET & BASE
 ===================== */
 :root {
-    --color-principal: #F18F01; /* puedes cambiar este valor */
+    --color-principal: #f18901; /* puedes cambiar este valor */
     --color-secundario: #050C10; /* puedes cambiar este valor */  
     --color-texto: #ECEBE4; /* puedes cambiar este valor */  
 }
@@ -75,7 +75,7 @@ body:has(.gallery-item:hover) .cursor {
     color: var(--color-secundario);
 
     line-height: 0.8;
-    letter-spacing: -0.08em;
+    letter-spacing: -0.12em;
 
     white-space: nowrap;
 }
@@ -168,7 +168,7 @@ body:has(.gallery-item:hover) .cursor {
     display: flex;
     font-size: 1rem;
     color: var(--color-principal);
-    font-weight: 100;
+    font-weight: 300;
     justify-content: center;
     gap: 130px;
     padding: 0 200px;
@@ -245,11 +245,17 @@ body:has(.gallery-item:hover) .cursor {
     padding: 120px 20px;
     background: var(--color-principal);
     color: var(--color-texto);
+    justify-content: center;
+    text-align: center;
   }
   
   .container {
     max-width: 900px;
     margin: 0 auto;
+  }
+
+  .container h3{
+    font-weight: 500;   
   }
   
   .gsap-title {
@@ -258,9 +264,11 @@ body:has(.gallery-item:hover) .cursor {
   }
   
   .gsap-text {
+    opacity: 0;
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 15px;
+    will-change: transform;
   }
   
   .gsap-boxes {
@@ -278,7 +286,6 @@ body:has(.gallery-item:hover) .cursor {
     justify-content: center;
     border-radius: 12px;
   }
-
 /* =====================
    GALLERY SECTION
 ===================== */

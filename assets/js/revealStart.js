@@ -21,7 +21,7 @@ tl
 
 .fromTo(".content h1",
 {
-    opacity: 0
+    opacity: 1
 },
 {
     opacity: 1,
@@ -41,7 +41,7 @@ tl
 .fromTo(".about p", 
     { y: 50, opacity: 0, filter: "blur(10px)" }, 
     { 
-        y: 400, 
+        y: 550, 
         opacity: 1, 
         duration: 0.8, 
         stagger: 0.15,
