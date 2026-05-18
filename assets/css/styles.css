@@ -2,7 +2,7 @@
    RESET & BASE
 ===================== */
 :root {
-    --color-principal: #f18901; /* puedes cambiar este valor */
+    --color-principal: #3560bb; /* puedes cambiar este valor */
     --color-secundario: #050C10; /* puedes cambiar este valor */  
     --color-texto: #ECEBE4; /* puedes cambiar este valor */  
 }
@@ -23,6 +23,10 @@ body {
     cursor: none;
 }
 
+body.is-scroll-locked {
+    overflow: hidden;
+}
+
 input, textarea {
     cursor: text;
 }
@@ -30,6 +34,7 @@ input, textarea {
 p{
     color: var(--color-texto);
 }
+
 /* =====================
    CUSTOM CURSOR
 ===================== */
@@ -43,6 +48,7 @@ p{
     z-index: 9999;
     transform: translate(-50%, -50%);
     transition: transform 0.12s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s;
+    mix-blend-mode: screen;
 }
 
 body:has(a:hover) .cursor,
@@ -72,7 +78,7 @@ body:has(.gallery-item:hover) .cursor {
 
 .intro-title {
     font-size: clamp(13rem, 18vw, 15rem);
-    color: var(--color-secundario);
+    color: var(--color-texto);
 
     line-height: 0.8;
     letter-spacing: -0.12em;
@@ -142,7 +148,7 @@ body:has(.gallery-item:hover) .cursor {
 .about p {
     opacity: 0;
     transform: translateY(40px);
-    color: var(--color-principal);
+    color: var(--color-texto);
 }
 
 .content h1 {
@@ -168,7 +174,7 @@ body:has(.gallery-item:hover) .cursor {
     display: flex;
     font-size: 1rem;
     color: var(--color-principal);
-    font-weight: 300;
+    font-weight: 500;
     justify-content: center;
     gap: 130px;
     padding: 0 200px;
@@ -235,6 +241,88 @@ body:has(.gallery-item:hover) .cursor {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* =====================
+   DEEP PARALLAX SECTION
+===================== */
+.deep-parallax-section {
+    position: relative;
+    min-height: 110vh;
+    overflow: hidden;
+    background: var(--color-secundario);
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    padding: 120px 80px;
+}
+
+.deep-parallax-media {
+    position: absolute;
+    inset: -18% 0;
+    z-index: 0;
+}
+
+.deep-parallax-img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    filter: saturate(0.75) brightness(0.55);
+    transform: scale(1.08);
+    will-change: transform;
+}
+
+.deep-parallax-shade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(5, 12, 16, 0.95), rgba(5, 12, 16, 0.35)),
+        linear-gradient(180deg, rgba(5, 12, 16, 0.15), rgba(5, 12, 16, 0.85));
+    pointer-events: none;
+}
+
+.deep-parallax-content {
+    position: relative;
+    z-index: 3;
+    max-width: 720px;
+}
+
+.deep-parallax-content span {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--color-principal);
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.3em;
+}
+
+.deep-parallax-content h2 {
+    color: var(--color-principal);
+    font-size: clamp(3.5rem, 9vw, 9rem);
+    font-weight: 850;
+    line-height: 0.85;
+}
+
+.deep-parallax-content p {
+    max-width: 540px;
+    margin-top: 34px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.deep-parallax-word {
+    position: absolute;
+    right: -4vw;
+    bottom: 8vh;
+    z-index: 2;
+    color: rgba(236, 235, 228, 0.12);
+    font-size: clamp(8rem, 24vw, 24rem);
+    font-weight: 900;
+    line-height: 0.8;
+    letter-spacing: -0.08em;
+    pointer-events: none;
+    will-change: transform;
 }
 
 /* =====================
@@ -310,7 +398,7 @@ body:has(.gallery-item:hover) .cursor {
     font-size: 0.75rem;
     font-weight: 900;
     letter-spacing: 0.3em;
-    color: rgba(255, 153, 0, 0.5);
+    color: #274c9c;
     display: block;
     margin-bottom: 12px;
 }
@@ -382,32 +470,6 @@ body:has(.gallery-item:hover) .cursor {
     margin-top: 90px;
 }
 
-.gallery-item:hover .gallery-img-wrap img {
-    transform: scale(1.06);
-    filter: saturate(1) brightness(1);
-}
-
-.gallery-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
-}
-
-.gallery-overlay span {
-    font-size: 0.75rem;
-    font-weight: 900;
-    letter-spacing: 0.2em;
-    color: var(--color-principal);
-}
-
 /* =====================
    CLOSING SECTION
 ===================== */
@@ -415,7 +477,6 @@ body:has(.gallery-item:hover) .cursor {
     background: var(--color-secundario);
     color: var(--color-texto);
     padding: 140px 80px;
-    border-top: 1px solid rgba(241, 137, 1, 0.22);
 }
 
 .closing-content {
@@ -451,7 +512,7 @@ body:has(.gallery-item:hover) .cursor {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1px;
-    background: rgba(241, 137, 1, 0.3);
+    background: #b4b4b4;
 }
 
 .closing-item {
@@ -532,6 +593,20 @@ body:has(.gallery-item:hover) .cursor {
 }
 
 @media (max-width: 900px) {
+    .deep-parallax-section {
+        min-height: 90vh;
+        padding: 90px 28px;
+    }
+
+    .deep-parallax-content h2 {
+        font-size: clamp(3rem, 18vw, 6rem);
+    }
+
+    .deep-parallax-word {
+        right: -12vw;
+        bottom: 5vh;
+    }
+
     .closing-section,
     .site-footer {
         padding-left: 28px;

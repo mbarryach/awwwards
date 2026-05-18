@@ -1,5 +1,16 @@
 // --- SMOOTH SCROLL LENIS---
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.scrollTo(0, 0);
+
 const lenis = new Lenis();
+window.lenis = lenis;
+
+if (document.body.classList.contains("is-scroll-locked")) {
+  lenis.stop();
+}
 
 function raf(time) {
   lenis.raf(time);

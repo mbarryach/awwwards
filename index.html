@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LANDING AIDA</title>
+    <title>IA y Creatividad · Debate Visual</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <!-- Fonts -->
@@ -11,13 +11,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+    <script>
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+
+        window.scrollTo(0, 0);
+    </script>
+
     <!-- Frameworks -->
     <!-- Lenis -->
     <script src="https://unpkg.com/@studio-freight/lenis"></script>
 
-        <!-- GSAP -->
+    <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrambleTextPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
@@ -26,18 +33,19 @@
 
     
 </head>
-<body>
+<body class="is-scroll-locked">
 
     <!-- Custom Cursor -->
     <div class="cursor"></div>
 
     <div class="intro-overlay">
-        <h1 class="intro-title">JAPAN NIGHT</h1>
+        <h1 class="intro-title">IA Y CREATIVIDAD</h1>
     </div>
 
     <section class="hero">
+        <!-- VÍDEO CAMBIADO: Nuevo vídeo de fondo de Pexels con URL directa MP4 -->
         <video autoplay muted loop playsinline>
-            <source src="assets/video/car-video.webm" type="video/webm">
+            <source src="assets\video\854323-hd_1920_1080_25fps.webm" type="video/mp4">
             Tu navegador no soporta video HTML5.
         </video>
 
@@ -45,18 +53,18 @@
 
         <section class="presentation">
             <div class="content">
-                <h1 class="hero-title">JAPAN NIGHT</h1>
+                <h1 class="hero-title">IA Y CREATIVIDAD</h1>
             </div>
 
             <div class="about">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos consequuntur cupiditate a atque numquam est temporibus amet asperiores alias.</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam beatae inventore atque incidunt quaerat enim accusamus odit quia at facilis?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto autem, deserunt atque fuga totam in eum assumenda praesentium ad natus?</p>
+                <p>La inteligencia artificial se encuentra en el centro de un debate que abarca desde sus implicaciones éticas hasta su impacto en la creatividad humana. ¿Nos hace menos creativos o nos ayuda a ir más allá de lo conocido?</p>
+                <p>Mientras una parte de la sociedad cree que la IA nos lleva a una “comodidad” peligrosa que podría anestesiar nuestra capacidad de innovar, otra sostiene que puede ser un catalizador para superar bloqueos creativos y explorar nuevas ideas.</p>
+                <p>El verdadero desafío no es elegir entre una u otra postura, sino entender cómo la IA está moldeando nuestra forma de crear y qué papel queremos jugar en este nuevo escenario.</p>
             </div>
             
 
             <div class="my-name">
-                <h1><b>DEVELOPED BY MARC BARRIACH</b></h1>
+                <h1><b>DESARROLLADO POR MARC BARRIACH</b></h1>
             </div>
         </section>
 
@@ -65,10 +73,30 @@
 
     <!-- First image -->
     <section class="first-image">
-        <h2 class="first-image-bg-text">AIDA</h2>
+        <h2 class="first-image-bg-text">AI·GEN</h2>
         <div class="parallax-img-wrap">
-            <img src="assets/images/eclipsechasers-aoraki-10180083_1920.jpg" alt="imagen" class="parallax-img">
+            <!-- IMAGEN PRINCIPAL: Mantenemos la imagen de arte digital que ya funcionaba -->
+            <img src="assets\images\pexels-gstudio-8640331.jpg" alt="Ilustración de IA generativa" class="parallax-img">
         </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <section class="deep-parallax-section">
+        <div class="deep-parallax-media">
+            <img src="assets/images/eclipsechasers-aoraki-10180083_1920.jpg" alt="Paisaje nocturno" class="deep-parallax-img">
+        </div>
+
+        <div class="deep-parallax-shade"></div>
+
+        <div class="deep-parallax-content">
+            <span>SCROLL STUDY</span>
+            <h2>La creatividad tambien se desplaza por capas.</h2>
+            <p>
+                Ideas, herramientas y criterio humano avanzan a ritmos distintos. El parallax separa esos planos para convertir el scroll en una lectura visual.
+            </p>
+        </div>
+
+        <h3 class="deep-parallax-word">HUMAN</h3>
     </section>
 
     <!-- New Section -->
@@ -76,24 +104,24 @@
   
         <div class="container">
         
-            <h3>Diseño</h3>
+            <h3>El dilema</h3>
             <h2 class="gsap-title text-mask">
-                <span class="line">Estructura Unibody.</span>
-                <span class="line">UN monumento al rendimiento.</span>
+                <span class="line">Potenciadora o limitante.</span>
+                <span class="line">El pulso por la innovación.</span>
             </h2>
                   
             <p class="gsap-text text-mask">
-                El iPhone 17 Pro y el iPhone 17 Pro Max llegan pisando fuerte con un rediseño total desde la propia base. Su nueva estructura Unibody de aluminio forjado térmicamente eleva la resistencia, el rendimiento y la autonomía a una nueva dimensión. Todo un hito de la ingeniería para crear los modelos de iPhone más potentes de la historia.
+                Un estudio reciente sugiere que, aunque la IA generativa puede ayudar a los individuos a ser más creativos, también podría reducir la diversidad de contenido a nivel colectivo, homogeneizando el contenido y limitando la innovación. Lejos de ofrecer una respuesta única, este hallazgo plantea un dilema de fondo.
             </p>
         
             <p class="gsap-text text-mask">
-                Aquí puedes probar ScrollTrigger, stagger, fade in, slide in y todo lo que quieras.
+                La clave está en cómo usamos estas herramientas. Hacer contenido con IA no significa reemplazar la creatividad humana, sino potenciarla, eliminando barreras técnicas y temporales que antes frenaban la producción de ideas. La tecnología aporta velocidad; el criterio humano, el contexto y la estrategia.
             </p>
         
             <div class="gsap-boxes">
-                <div class="box">Box 1</div>
-                <div class="box">Box 2</div>
-                <div class="box">Box 3</div>
+                <div class="box">Explorar</div>
+                <div class="box">Cuestionar</div>
+                <div class="box">Crear</div>
             </div>
     
         </div>
@@ -103,58 +131,43 @@
     <!-- Gallery Section -->
     <section class="gallery-section">
         <div class="gallery-header">
-            <span class="gallery-label">GSAP GALLERY</span>
-            <h2 class="first-scramble-text">Horizontal Scrolling Gallery</h2>
+            <span class="gallery-label">VISUAL FRAGMENTS</span>
+            <h2 class="first-scramble-text">El ojo humano, la máquina</h2>
         </div>
 
         <div class="gallery-wrap">
             <div class="gallery-grid">
+                <!-- GALLERY: Las imágenes 1, 2, 5 y 6 se mantienen igual (funcionaban bien) -->
                 <div class="gallery-item">
                     <div class="gallery-img-wrap">
-                        <img src="assets/images/eclipsechasers-aoraki-10180083_1920.jpg" alt="foto 1">
-                        <div class="gallery-overlay">
-                            <span>01</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2065&auto=format&fit=crop" alt="Cerebro digital">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-img-wrap">
-                        <img src="assets/images/eclipsechasers-aoraki-10180083_1920.jpg" alt="foto 2">
-                        <div class="gallery-overlay">
-                            <span>02</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?q=80&w=2070&auto=format&fit=crop" alt="Manos y redes neuronales">
+                    </div>
+                </div>
+                <!-- IMAGEN 3 CAMBIADA: Nueva imagen de Pexels con URL directa -->
+                <div class="gallery-item">
+                    <div class="gallery-img-wrap">
+                        <img src="https://images.pexels.com/photos/8721342/pexels-photo-8721342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Colaboración entre humanos y robot">
+                    </div>
+                </div>
+                <!-- IMAGEN 4 CAMBIADA: Nueva imagen de Pexels con URL directa -->
+                <div class="gallery-item">
+                    <div class="gallery-img-wrap">
+                        <img src="https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Futuro tecnológico y conexión digital">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-img-wrap">
-                        <img src="assets/images/eclipsechasers-aoraki-10180083_1920.jpg" alt="foto 3">
-                        <div class="gallery-overlay">
-                            <span>03</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070&auto=format&fit=crop" alt="Robot creativo">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-img-wrap">
-                        <img src="assets/images/eclipsechasers-aoraki-10180083_1920.jpg" alt="foto 4">
-                        <div class="gallery-overlay">
-                            <span>04</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-img-wrap">
-                        <img src="assets/images/eclipsechasers-aoraki-10180083_1920.jpg" alt="foto 5">
-                        <div class="gallery-overlay">
-                            <span>05</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-img-wrap">
-                        <img src="assets/images/eclipsechasers-aoraki-10180083_1920.jpg" alt="foto 6">
-                        <div class="gallery-overlay">
-                            <span>06</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop" alt="Visualización de datos IA">
                     </div>
                 </div>
             </div>
@@ -164,38 +177,38 @@
     <!-- Closing Section -->
     <section class="closing-section">
         <div class="closing-content">
-            <span class="closing-label">FINAL SCENE</span>
-            <h2>Una noche japonesa hecha de velocidad, luz y silencio.</h2>
+            <span class="closing-label">EQUILIBRIO</span>
+            <h2>La colaboración hombre-máquina redefine lo posible.</h2>
             <p>
-                La experiencia termina con una mirada más pausada: contraste alto, movimiento preciso y una atmósfera pensada para mantener viva la tensión visual hasta el último scroll.
+                La experiencia termina con una mirada más pausada: el desafío no es si la IA mata o potencia la creatividad, sino cómo integramos su potencia sin perder de vista el criterio, la ética y la voz única que solo los humanos podemos aportar.
             </p>
         </div>
 
         <div class="closing-grid">
             <article class="closing-item">
                 <span>01</span>
-                <h3>Dirección visual</h3>
-                <p>Composición limpia, tipografía fuerte y color intenso para sostener el carácter de la landing.</p>
+                <h3>Contexto emocional</h3>
+                <p>La IA puede generar textos técnicamente correctos, pero carece de la sutileza para conectar emocionalmente con una audiencia. El toque humano sigue siendo insustituible.</p>
             </article>
 
             <article class="closing-item">
                 <span>02</span>
-                <h3>Movimiento</h3>
-                <p>Animaciones GSAP que acompañan el contenido sin quitarle protagonismo a las imágenes.</p>
+                <h3>Formular mejor</h3>
+                <p>La calidad del contenido que obtenemos de la IA depende directamente de cómo le preguntamos. Una instrucción creativa y detallada genera respuestas mucho más afinadas.</p>
             </article>
 
             <article class="closing-item">
                 <span>03</span>
-                <h3>Atmósfera</h3>
-                <p>Un cierre oscuro y directo que conecta con la energía nocturna del proyecto.</p>
+                <h3>Vigilancia humana</h3>
+                <p>Ningún sistema, por avanzado que sea, comprende completamente el contexto de un negocio. La supervisión humana es imprescindible para detectar 'alucinaciones' y mantener la autenticidad.</p>
             </article>
         </div>
     </section>
 
     <footer class="site-footer">
         <div class="footer-brand">
-            <h2>JAPAN NIGHT</h2>
-            <p>Developed by Marc Barriach</p>
+            <h2>IA Y CREATIVIDAD</h2>
+            <p>Desarrollado por Marc Barriach</p>
         </div>
 
         <nav class="footer-nav" aria-label="Footer navigation">
@@ -211,6 +224,7 @@
     <script src="assets/js/aidaText.js"></script>
     <script src="assets/js/revealStart.js"></script>
     <script src="assets/js/gallery.js"></script>
+    <script src="assets/js/parallaxSection.js"></script>
     <script src="assets/js/textSection.js"></script>
     
 </body>

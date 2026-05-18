@@ -1,6 +1,18 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline();
+window.scrollTo(0, 0);
+
+const tl = gsap.timeline({
+    onComplete: () => {
+        document.body.classList.remove("is-scroll-locked");
+
+        if (window.lenis) {
+            window.lenis.start();
+        }
+
+        ScrollTrigger.refresh();
+    }
+});
 
 tl
 .fromTo(".intro-title", {
