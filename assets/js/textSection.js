@@ -55,7 +55,7 @@
                         yPercent: 110,
                         opacity: 0,
                         duration: 0.85,
-                        stagger: 0.08,
+                        stagger: 0.1,
                         ease: "expo.out",
                         scrollTrigger: hasScrollTrigger
                             ? {
