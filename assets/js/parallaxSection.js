@@ -33,7 +33,7 @@ if (deepParallaxSection) {
             scrollTrigger: {
                 trigger: deepParallaxSection,
                 start: "top 85%",
-                end: "bottom 25%",
+                end: "bottom 100%",
                 scrub: true,
             },
         }

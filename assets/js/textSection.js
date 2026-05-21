@@ -21,8 +21,8 @@
         gsap.from(maskTargets, {
             y: 60,
             opacity: 0,
-            duration: 0.8,
-            stagger: 0.12,
+            duration: 1,
+            stagger: 0.3,
             ease: "expo.out",
             scrollTrigger: hasScrollTrigger
                 ? {
